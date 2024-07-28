@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "vcf2md"
+version = "0.1.0"
+description = "A CLI command to convert VCF files to Markdown"
+authors = ["Your Name <your.email@example.com>"]
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = "^8.0.3"
+vobject = "^0.9.6.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+vcf2md = "src.vcf_to_markdown:main"
